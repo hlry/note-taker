@@ -13,7 +13,7 @@
 * [Questions](#Questions)
 
 ## Description
-This project will help you generate a professional README file in markdown format using node and your Command Line Interface.
+This project will help you maintain your to-do list, by writing and saving notes using Express.js back end. The note data will be saved and retrieved from a JSON file.
 
 ## Screenshot
 ![sample-to-do-list](public/assets/images/note-taker-screenshot.png)
