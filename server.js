@@ -11,11 +11,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
-app.use(apiRoutes);
-app.use('/', htmlRoutes);
 
 // make front end files available
+// keep above routes
 app.use(express.static('public'));
+
+app.use(apiRoutes);
+app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`)
