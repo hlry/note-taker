@@ -10,6 +10,4 @@ function writeNotes(notes) {
     });
 }
 
-// writeNotes();
-
 module.exports = writeNotes;

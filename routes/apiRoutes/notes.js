@@ -29,5 +29,8 @@ router.post('/api/notes', (req, res) => {
 
 });
 
+// elete notes
+
+
 
 module.exports = router;
