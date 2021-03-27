@@ -2,9 +2,9 @@ const express = require('express');
 const apiRoutes = require('./routes/apiRoutes/notes.js');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-
-
+// add heroku port or local port
 const PORT = process.env.PORT || 3001;
+// instantiate server
 const app = express();
 
 // parse incoming string or array data
