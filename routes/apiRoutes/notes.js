@@ -1,8 +1,9 @@
-const fs = require("fs");
+const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 const { notes } = require('../../db/db.json');
-const writeNotes = require('../../lib/notes');
+const writeNotes = require('../../db/notes');
+
 
 // read db.json and return contents as JSON
 router.get('/api/notes', (req, res) => {
@@ -19,10 +20,12 @@ router.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString();
     // push note to /db
     notes.push(newNotes);
+    // test with console log
+    console.log(newNotes);
     // write notes string to /db/db.json
     writeNotes(notes);
     // return new note as json
-    res.json(res.body);
+    res.json(newNotes);
 
 });
 
